@@ -17,10 +17,10 @@ class ContactList extends Component {
       <ul className={styles.contactList}>
         {contacts.map(({ id, ...contact }) => (
           <li key={id}>
-            <ContactItem contact={contact} deleteContact={deleteContact} />
-            <button type="button" onClick={() => deleteContact(id)}>
-              &#10008;
-            </button>
+            <ContactItem
+              contact={contact}
+              deleteContact={() => deleteContact(id)}
+            />
           </li>
         ))}
       </ul>
